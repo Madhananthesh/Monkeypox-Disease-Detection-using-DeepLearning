@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>our team section Using HTML and CSS</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet/css" href="styles.css">
+  <style>
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Yatra+One');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body{
+  background: #8c7ae6;
+}
+
+.wrapper{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.wrapper h1{
+  font-family: 'Yatra One', cursive;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.our_team{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.our_team .team_member{
+  width: 250px;
+  margin: 5px;
+  background: #fff;
+  padding: 20px 10px;
+}
+
+.our_team .team_member .member_img{
+  background: #e9e5fa;  
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.our_team .team_member .member_img img{
+  width: 100%;
+  height: 100%;
+}
+
+.our_team .team_member h3{
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0px;
+}
+
+.our_team .team_member span{
+  font-size: 12px;
+}
+
+.our_team .team_member p{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+
+  </style>
+  
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>Our Team</h1>
+    <div class="our_team">
+        <div class="team_member">
+          <div class="member_img">
+             <img src="./static/preetham.png" alt="our_team">
+          </div>
+          <h3>Preetham Kumar D M</h3>
+          <span>SDMIT | CSE</span>
+          <p>Phone no. : 8550057084</p>
+        </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="./static/punith1.png" alt="our_team">
+          </div>
+          <h3>Punith Kumar K</h3>
+          <span>SDMIT | CSE</span>
+          <p>Phone no. : 9207531032</p>
+        </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="./static/madhanr.png" alt="our_team">
+          </div>
+          <h3>R Madhananthesh</h3>
+          <span>SDMIT | CSE</span>
+          <p>Phone no. : 8431699849</p>
+        </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="./static/kishanbabu.png" alt="our_team">
+          </div>
+          <h3>Kishan Babu M S</h3>
+          <span>SDMIT | CSE</span>
+          <p>Phone no. : 8637521906</p>
+        </div>  
+    </div>
+</div>	
+
+</body>
+</html>

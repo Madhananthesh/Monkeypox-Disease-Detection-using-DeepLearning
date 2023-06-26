@@ -1,0 +1,57 @@
+
+<style>
+    .footer{
+        background-color: black;
+        color: black;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 70px;   /* Height of the footer */
+    }
+
+
+
+    
+</style>
+<div class="cent">
+{% extends 'base.html' %}
+<link rel="stylesheet" type="text/css" href="home.css">
+{% block content%}
+
+<center><img src="{{ url_for('static', filename= filename) }}" alt="" style="width: 300px; height:300px;"></center>
+<br>
+<br>
+{% if show==True %}
+<center>
+
+    {% if message=="others" %}
+    <h3><span class="badge badge-success">{{message}}</span></h3>
+    {%endif%}
+
+    {% if message=="monkeypox" %}
+    <h3><span class="badge badge-danger">{{message}}</span></h3>
+    {%endif%}
+    <br>
+    <br>
+
+    <a href="/" class="btn btn-info" role="button">Go Back</a>
+</center>
+{% else %}
+<center>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="file">Please Upload Image Of Monkeypox Lession : </label>
+        <input type="file" name="img" id="img">
+        <button type="submit" class="btn btn-primary ml-3">Submit</button>
+    </form>
+    <br>
+    <br>
+    {{message}}
+</center>
+<div class="footer">
+<footer>
+    <p style="color:whitesmoke;text-align: center; font-size: 15px;">In this project, we propose a deep learning-based approach for detecting monkeypox disease using skin lesion images. We utilized a Convolutional Neural Network (CNN) architecture to automatically extract features from the lesion images and classify them into two classes: monkeypox positive and negative. Our results demonstrate that the proposed model achieved high accuracy and specificity in detecting monkeypox disease from skin lesion images, making it a promising tool for early detection of this potentially deadly disease.</p>
+</footer>
+</div>
+</div>
+{% endif %}
+{% endblock%}
